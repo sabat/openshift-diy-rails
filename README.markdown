@@ -1,7 +1,7 @@
 openshift-diy-rails
 ===================
 
-Ruby 1.9.3, Rails 3.2.6 on OpenShift platform
+Ruby 2.2.2, Rails 4.2.1 on OpenShift platform
 
 
 Installation
@@ -11,10 +11,10 @@ Installation
 2.  Log into a remote machine (check [instruction](https://openshift.redhat.com/community/developers/remote-access))
 3.  Execute  
 `cd $OPENSHIFT_TMP_DIR`  
-`wget https://raw.github.com/szemek/openshift-diy-rails/master/install.sh`  
+`wget https://raw.github.com/sabat/openshift-diy-rails/master/install.sh`  
 `chmod u+x install.sh`  
 `./install.sh`
-4.  Wait until installation is finished. It should take circa 15-20 minutes.
-5.  Clone locally repository: `git clone https://github.com/szemek/openshift-diy-rails.git`
+4.  Wait until installation is finished. It should take in about 15-20 minutes.
+5.  Clone locally repository: `git clone https://github.com/sabat/openshift-diy-rails.git`
 6.  Feel free to modify code, set up remote repository & push your code to OpenShift platform.
 7.  Have fun :-)
