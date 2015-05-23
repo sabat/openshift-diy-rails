@@ -45,7 +45,7 @@ make
 make install
 
 # Fix problem where gem tries to bind to 0.0.0.0 to do DNS lookups (ugh)
-sed --in-place -r -e 's|.0.0.0.0.|ENV["OPENSHIFT_DIY_IP"]|' lib/ruby/2.2.0/resolv.rb
+sed --in-place -r -e 's|.0.0.0.0.|ENV["OPENSHIFT_DIY_IP"]|' $OPENSHIFT_RUNTIME_DIR/lib/ruby/2.2.0/resolv.rb
 
 export PATH=$OPENSHIFT_RUNTIME_DIR/bin:$PATH
 
