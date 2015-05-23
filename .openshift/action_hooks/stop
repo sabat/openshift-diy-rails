@@ -1,5 +1,10 @@
 #!/bin/bash
 # The logic to stop your application should be put in this script.
-# kill -9 `ps -ef | grep "rails server" | grep -v grep | awk '{ print $2 }'` > /dev/null 2>&1
-server_pid=`cat $OPENSHIFT_REPO_DIR/tmp/pids/server.pid`
-kill $server_pid
+
+if [ -f $OPENSHIFT_REPO_DIR/tmp/pids/server.pid ]; then
+  server_pid=`cat $OPENSHIFT_REPO_DIR/tmp/pids/server.pid`
+  kill $server_pid
+else
+  # go nuclear
+  kill -9 `ps -ef | grep "rails server" | grep -v grep | awk '{ print $2 }'` > /dev/null 2>&1
+fi
